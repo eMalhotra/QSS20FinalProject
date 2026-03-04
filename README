@@ -1,0 +1,12 @@
+├── data/
+│   ├── NOT IN REPO: RAW 311 DATA          # The download is too large to include as a file. See below for link & instructions.
+│   ├── 311_SR_Data_Dictionary (3).xlsx    # The dictionary for the 311 dataset (as downloaded above).
+│   ├── brooklyn_selected_zips.csv         # Census data (scraped from API), after being cleaned.
+│   ├── cleaned311.csv                     # 311 data, saved after all cleaning and counts.
+│   └── merged.csv                         # The merged dataset including census and 311 data sorted by zipcode and year.
+├── scripts/
+│   ├── QSS20_clean_combine.ipynb          # Takes the original raw data (see below) and does the first round of cleaning, merges all years into one dataset.
+│   ├── census.ipynb                       # Scrapes a web API for census data, compares NYC zip codes, and extracts information on our 3 zips to brooklyn_selected_zips.csv
+│   ├── merge.ipynb                        # Fully cleans 311 data (output: cleaned311.csv) and merges it with census data, outputting merged.csv.
+│   └── analysis.ipynb                     # Runs analyses on the data and creates plots.
+└── README.md
