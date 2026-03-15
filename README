@@ -1,27 +1,28 @@
+Directory for Data Storage and Computation:
 ├── data/
-│   ├── brooklyn_selected_zips.csv    # Consolidated year-over-year demographic data
-│   ├── cleaned311.csv                # 311 data, saved after all cleaning and counts
-│   ├── merged.csv                    # The census & 311 data, merged on ZIPYEAR
-│   ├── LDAdata.csv                   # 311 data sorted using an LDA model, merged with census 
-│   └── other_data_link               # Contains a drive link containing our large data files
-│      ├── raw311_2012-2019.csv       # Raw downloaded 311 data for our 3 zip codes, 2012-2019 
-│      ├── raw311_2021-2022.csv       # Raw downloaded 311 data for our 3 zip codes, 2020-2022 
-│      ├── combined311.csv            # 311 data an LDA model, merged with census 
-│      └── preCategories.csv          # Contains a link to preCategories.csv and raw311data.csv
+│   ├── brooklyn_selected_zips.csv # Consolidated year-over-year demographic data
+│   ├── cleaned311.csv             # 311 data, saved after all cleaning and counts
+│   ├── merged.csv                 # The census & 311 data, merged on ZIPYEAR
+│   ├── LDAdata.csv                # 311 data sorted using an LDA model, merged with census 
+│   └── other_data_link            # Contains a drive link containing our large data files
+│      ├── raw311_2012-2019.csv    # Raw downloaded 311 data for our 3 zip codes, 2012-2019 
+│      ├── raw311_2021-2022.csv    # Raw downloaded 311 data for our 3 zip codes, 2020-2022 
+│      ├── combined311.csv         # 311 data an LDA model, merged with census 
+│      └── preCategories.csv       # Contains a link to preCategories.csv and raw311data.csv
 │   
 ├── scripts/
-│   ├── QSS20_clean_combine.ipynb     # First round of 311 cleaning, merges all years
+│   ├── QSS20_clean_combine.ipynb  # First round of 311 cleaning, merges all years
 │   │                                 ← input: raw311_2012-2019.csv & raw311_2020-2022.csv
 │   │                                 ← output: combined311.csv
-│   ├── census.ipynb                  # Scrapes census data, compares NYC zips, saves 3 zips 
+│   ├── census.ipynb               # Scrapes census data, compares NYC zips, saves 3 zips 
 │   │                                 ← output: brooklyn_selected_zips.csv
-│   ├── merge.ipynb                   # Fully cleans 311 data and merges it with census data
+│   ├── merge.ipynb                # Fully cleans 311 data and merges it with census data
 │   │                                 ← input: combined311.csv, brooklyn_selected_zips.csv
 │   │                                 ← output: cleaned311.csv, preCategories.csv, merged.csv
-│   ├── categorization2.ipynb         # Applies LDA categorization and compares to manual work
+│   ├── categorization2.ipynb      # Applies LDA categorization and compares to manual work
 │   │                                 ← input: preCategories.csv, brooklyn_selected_zips.csv 
 │   │                                 ← output: LDAdata.csv
-│   └── analysis.ipynb                # Runs analyses on the data and creates plots
+│   └── analysis.ipynb             # Runs analyses on the data and creates plots
 │                                     ← input: merged.csv 
 │  
 ├── figures/
